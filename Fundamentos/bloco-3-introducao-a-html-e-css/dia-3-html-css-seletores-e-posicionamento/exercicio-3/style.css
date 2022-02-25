@@ -1,0 +1,16 @@
+li {
+  list-style: none;
+}
+
+h1,
+p {
+  text-align: center;
+}
+
+ol li:hover {
+  background-color: rgba(2, 146, 2, 0.904);
+}
+
+ol li:active {
+  font-family: sans-serif;
+}
