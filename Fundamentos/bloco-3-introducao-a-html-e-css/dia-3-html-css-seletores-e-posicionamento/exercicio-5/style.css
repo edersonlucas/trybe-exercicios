@@ -1,0 +1,60 @@
+ol {
+  background-color: yellow;
+}
+
+ol li:nth-child(even) {
+  color: green;
+}
+
+ol li:nth-child(odd) {
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  color: red;
+}
+h1,
+h2,
+h3 em {
+  font-size: 40px;
+  border: 1px solid black;
+}
+
+li {
+  font-size: 20px;
+}
+
+li em {
+  font-weight: 700;
+}
+ul.linguagens li:nth-child(-n + 3) {
+  color: rgb(0, 47, 255);
+}
+
+ul li span {
+  background-color: rgb(255, 118, 140);
+}
+
+ul.links li.stack a:hover:nth-child(1) {
+  color: orangered;
+  font-weight: 700;
+}
+
+ul.links li.w3s a:hover:nth-child(1) {
+  color: green;
+  font-weight: 700;
+}
+ul.links li.mdn a:hover:nth-child(1) {
+  color: black;
+  font-weight: 700;
+}
+ul.links li.dev a:hover:nth-child(1) {
+  color: yellow;
+  font-weight: 700;
+}
+ul.links li.trybe a:hover:nth-child(1) {
+  color: green;
+  font-weight: 700;
+}
