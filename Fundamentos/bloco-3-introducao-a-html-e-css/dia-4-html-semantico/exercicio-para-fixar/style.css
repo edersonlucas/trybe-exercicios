@@ -1,0 +1,46 @@
+h1 {
+  text-align: center;
+}
+
+.first {
+  background-color: rgb(235, 200, 84);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 200px;
+  margin: auto;
+  list-style: none;
+}
+
+.second {
+  display: inline-block;
+  background-color: rgb(219, 219, 219);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 300px;
+}
+
+.third {
+  display: inline-block;
+  background-color: rgb(170, 142, 106);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 300px;
+}
+
+.textos {
+  text-align: center;
+  list-style: none;
+}
+
+.textos ul li {
+  list-style: none;
+  display: inline;
+}
+
+.bloco-meio {
+  display: block;
+  text-align: center;
+}
