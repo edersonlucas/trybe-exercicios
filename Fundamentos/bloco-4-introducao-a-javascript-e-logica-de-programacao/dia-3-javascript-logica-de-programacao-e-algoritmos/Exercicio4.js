@@ -13,4 +13,4 @@ for (let numero = 0; numero <= 50; numero += 1) {
   }
 }
 
-console.log(`O maior número primo entre 0 e 50 e: ${maiorNumeroPrimo}`)
+console.log(`O maior número primo entre 0 e 50 é o: ${maiorNumeroPrimo}`)
