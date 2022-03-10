@@ -22,7 +22,7 @@
 let numero = 6
 let resultado
 if (numero == 1 || numero == 0) {
-  resultado = numero
+  resultado = 1
 } else {
   resultado = numero
   for (multiplicador = numero; multiplicador > 0; multiplicador -= 1) {
