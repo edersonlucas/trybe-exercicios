@@ -51,3 +51,13 @@ for (let index = 0; index < dezDaysList.length; index += 1) {
   console.log(li);
   ulDays.append(li);
 }
+
+// Exercício 2:
+let divButons = document.querySelector('.buttons-container');
+function criaBotao(string) {
+  let botao = document.createElement('button');
+  botao.innerText = string;
+  botao.id = 'btn-holiday';
+  divButons.appendChild(botao);
+}
+criaBotao('Feriados');
