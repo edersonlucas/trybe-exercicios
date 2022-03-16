@@ -48,7 +48,6 @@ for (let index = 0; index < dezDaysList.length; index += 1) {
     li.classList.add('holiday');
   }
   li.innerText = dezDaysList[index];
-  console.log(li);
   ulDays.append(li);
 }
 
@@ -61,3 +60,18 @@ function criaBotao(string) {
   divButons.appendChild(botao);
 }
 criaBotao('Feriados');
+
+// Exercício 3:
+let botaoFeriado = document.getElementById('btn-holiday');
+let numeros = 1;
+botaoFeriado.addEventListener('click', function () {
+  numeros += 1;
+  let holiday = document.querySelectorAll('.holiday');
+  for (let index = 0; index < holiday.length; index += 1) {
+    if (numeros % 2 === 0) {
+      holiday[index].style.backgroundColor = '#2fc18c';
+    } else {
+      holiday[index].style.backgroundColor = 'rgb(238,238,238)';
+    }
+  }
+});
