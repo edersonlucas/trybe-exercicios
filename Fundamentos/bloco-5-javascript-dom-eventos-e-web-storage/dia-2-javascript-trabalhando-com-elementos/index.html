@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Exercicio 1
+      let body = document.getElementsByTagName('body')[0];
+      let h1 = document.createElement('h1');
+      body.appendChild(h1).innerText = 'Exercício 5.2 - JavaScript DOM';
+      // Exercicio 2
+      let main = document.createElement('main');
+      body.appendChild(main).className = 'main-content';
+      // Exercicio 3
+      let section = document.createElement('section');
+      main.appendChild(section).className = 'center-content';
+      // Exercicio 4
+      let p = document.createElement('p');
+      section.appendChild(p).innerText = 'Trybe a Melhor!';
+      // Exercicio 5
+      let sectionleft = document.createElement('section');
+      main.appendChild(sectionleft).className = 'left-content';
+      // Exercicio 6
+      let sectionRigth = document.createElement('section');
+      main.appendChild(sectionRigth).className = 'right-content';
+      // Exercicio 7
+      let img = document.createElement('img');
+      img.className = 'small-image';
+      sectionleft.appendChild(img).src = 'https://picsum.photos/200';
+      // Exercicio 8
+      let listaNaoOrdenada = document.createElement('ul');
+      let numeros = [
+        'um',
+        'dois',
+        'três',
+        'quatro',
+        'cinco',
+        'seis',
+        'sete',
+        'oito',
+        'nove',
+        'dez'
+      ];
+      for (numero of numeros) {
+        let li = document.createElement('li');
+        listaNaoOrdenada.appendChild(li).innerText = numero;
+      }
+      sectionRigth.appendChild(listaNaoOrdenada);
+      // Exercicio 9
+      function criarH3(quantidade) {
+        for (let i = 1; i <= quantidade; i += 1) {
+          let h3 = document.createElement('h3');
+          main.appendChild(h3).innerText = `Esse é o h3 número: ${i}`;
+        }
+      }
+      criarH3(3);
+
+      // Alterações e Remoções
+      // Exercicio 1
+      h1.className = 'title';
+      // Exercicio 2
+      let mapearH3 = document.getElementsByTagName('h3');
+      for (let index = 0; index < mapearH3.length; index += 1) {
+        mapearH3[index].className = 'description';
+      }
+      // Exercicio 3
+      main.removeChild(sectionleft);
+      // Exercicio 4
+      sectionRigth.style.marginRight = 'auto';
+      console.log(sectionRigth);
+      // Exercicio 5
+      section.parentElement.style.backgroundColor = '#036b52';
+      // Exercicio 6
+      let mapearLi = document.getElementsByTagName('li');
+      console.log(mapearLi.length);
+      console.log(mapearLi);
+      for (let index = 9; index > 7; index -= 1) {
+        console.log(index);
+        listaNaoOrdenada.removeChild(mapearLi[index]);
+      }
+    </script>
+  </body>
+</html>
