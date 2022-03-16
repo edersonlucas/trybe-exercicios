@@ -124,12 +124,14 @@
       // Exercicio 5
       section.parentElement.style.backgroundColor = '#036b52';
       // Exercicio 6
-      let mapearLi = document.getElementsByTagName('li');
-      console.log(mapearLi.length);
-      console.log(mapearLi);
-      for (let index = 9; index > 7; index -= 1) {
-        console.log(index);
-        listaNaoOrdenada.removeChild(mapearLi[index]);
+      let mapearLi = document.querySelectorAll('li');
+      for (let index = 0; index < mapearLi.length; index += 1) {
+        if (
+          mapearLi[index].innerText.includes('dez') ||
+          mapearLi[index].innerText.includes('nove')
+        ) {
+          listaNaoOrdenada.removeChild(mapearLi[index]);
+        }
       }
     </script>
   </body>
