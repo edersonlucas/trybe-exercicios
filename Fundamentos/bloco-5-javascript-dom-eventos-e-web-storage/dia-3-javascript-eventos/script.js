@@ -53,13 +53,13 @@ for (let index = 0; index < dezDaysList.length; index += 1) {
 
 // Exercício 2:
 let divButons = document.querySelector('.buttons-container');
-function criaBotao(string) {
+function criaBotao(string, id) {
   let botao = document.createElement('button');
   botao.innerText = string;
-  botao.id = 'btn-holiday';
+  botao.id = id;
   divButons.appendChild(botao);
 }
-criaBotao('Feriados');
+criaBotao('Feriados', 'btn-holiday');
 
 // Exercício 3:
 let botaoFeriado = document.getElementById('btn-holiday');
@@ -75,3 +75,6 @@ botaoFeriado.addEventListener('click', function () {
     }
   }
 });
+
+// Exercício 4:
+criaBotao('Sexta-feira', 'btn-friday');
