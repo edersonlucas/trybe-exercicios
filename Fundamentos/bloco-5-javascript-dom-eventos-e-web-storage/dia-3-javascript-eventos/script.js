@@ -63,12 +63,12 @@ criaBotao('Feriados', 'btn-holiday');
 
 // Exercício 3:
 let botaoFeriado = document.getElementById('btn-holiday');
-let numeros = 1;
+let contadorFeriado = 1;
 botaoFeriado.addEventListener('click', function () {
-  numeros += 1;
+  contadorFeriado += 1;
   let holiday = document.querySelectorAll('.holiday');
   for (let index = 0; index < holiday.length; index += 1) {
-    if (numeros % 2 === 0) {
+    if (contadorFeriado % 2 === 0) {
       holiday[index].style.backgroundColor = '#2fc18c';
     } else {
       holiday[index].style.backgroundColor = 'rgb(238,238,238)';
@@ -78,3 +78,18 @@ botaoFeriado.addEventListener('click', function () {
 
 // Exercício 4:
 criaBotao('Sexta-feira', 'btn-friday');
+
+//Exercício 5:
+let botaoSexta = document.getElementById('btn-friday');
+let contadorSexta = 1;
+botaoSexta.addEventListener('click', function () {
+  contadorSexta += 1;
+  let friday = document.querySelectorAll('.friday');
+  for (let index = 0; index < friday.length; index += 1) {
+    if (contadorSexta % 2 == 0) {
+      friday[index].style.backgroundColor = '#2fc18c';
+    } else {
+      friday[index].style.backgroundColor = 'rgb(238,238,238)';
+    }
+  }
+});
