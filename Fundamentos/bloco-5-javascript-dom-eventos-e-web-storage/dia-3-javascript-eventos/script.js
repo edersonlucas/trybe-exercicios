@@ -53,9 +53,9 @@ for (let index = 0; index < dezDaysList.length; index += 1) {
 
 // Exercício 2:
 let divButons = document.querySelector('.buttons-container');
-function criaBotao(string, id) {
+function criaBotao(nomeDoBotao, id) {
   let botao = document.createElement('button');
-  botao.innerText = string;
+  botao.innerText = nomeDoBotao;
   botao.id = id;
   divButons.appendChild(botao);
 }
@@ -105,3 +105,14 @@ function eventoMouse(evento, dias, pixel) {
 }
 eventoMouse('mouseover', dias, '28px');
 eventoMouse('mouseout', dias, '20px');
+
+// Exercicio 7:
+let minhasTarefas = document.querySelector('.my-tasks');
+function criarTarefa(tarefa) {
+  let tarefaCriada = document.createElement('span');
+  tarefaCriada.innerText = tarefa;
+  minhasTarefas.appendChild(tarefaCriada);
+}
+criarTarefa('Cozinhar\n');
+criarTarefa('Almoçar\n');
+criarTarefa('Ver Aula');
