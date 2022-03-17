@@ -113,6 +113,39 @@ function criarTarefa(tarefa) {
   tarefaCriada.innerText = tarefa;
   minhasTarefas.appendChild(tarefaCriada);
 }
-criarTarefa('Cozinhar\n');
-criarTarefa('Almoçar\n');
-criarTarefa('Ver Aula');
+criarTarefa('Cozinhar');
+
+// Exercicio 8:
+function corLegenda(cor) {
+  let criarLegenda = document.createElement('div');
+  criarLegenda.style.backgroundColor = cor;
+  criarLegenda.classList = 'task';
+  minhasTarefas.append(criarLegenda);
+}
+corLegenda('red');
+
+// Exercicio 9:
+let contadorLegenda = 1;
+let legenda = document.querySelector('.task');
+legenda.addEventListener('click', function () {
+  contadorLegenda += 1;
+  if (contadorLegenda % 2 === 0) {
+    legenda.classList.add('selected');
+  } else {
+    legenda.classList.remove('selected');
+  }
+});
+
+// Exercicio 10:
+function marcar() {
+  for (let index = 0; index < dias.length; index += 1) {
+    dias[index].addEventListener('click', function (event) {
+      let taskSelect = document.querySelector('.selected');
+      event.target.style.backgroundColor = taskSelect.style.backgroundColor;
+      event.target.addEventListener('click', function () {
+        event.target.style.backgroundColor = 'rgb(238,238,238)';
+      });
+    });
+  }
+}
+marcar();
