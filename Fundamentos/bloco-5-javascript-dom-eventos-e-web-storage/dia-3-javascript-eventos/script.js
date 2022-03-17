@@ -93,3 +93,15 @@ botaoSexta.addEventListener('click', function () {
     }
   }
 });
+
+//Exercício 6:
+let dias = document.querySelectorAll('.day');
+function eventoMouse(evento, dias, pixel) {
+  for (let index = 0; index < dias.length; index += 1) {
+    dias[index].addEventListener(evento, function (event) {
+      event.target.style.fontSize = pixel;
+    });
+  }
+}
+eventoMouse('mouseover', dias, '28px');
+eventoMouse('mouseout', dias, '20px');
