@@ -137,15 +137,37 @@ legenda.addEventListener('click', function () {
 });
 
 // Exercicio 10:
-function marcar() {
-  for (let index = 0; index < dias.length; index += 1) {
-    dias[index].addEventListener('click', function (event) {
-      let taskSelect = document.querySelector('.selected');
-      event.target.style.backgroundColor = taskSelect.style.backgroundColor;
-      event.target.addEventListener('click', function () {
-        event.target.style.backgroundColor = 'rgb(238,238,238)';
-      });
-    });
+dias.forEach(marcar);
+function marcar(element) {
+  element.addEventListener('click', function (event) {
+    let result = element.classList.toggle('day');
+    if (result === false) {
+      event.target.style.backgroundColor =
+        document.querySelector('.selected').style.backgroundColor;
+    } else {
+      event.target.style.backgroundColor = 'rgb(238,238,238)';
+    }
+  });
+}
+
+// Bônus
+let botaoAdd = document.querySelector('#btn-add');
+let inputCompromisso = document.querySelector('#task-input');
+let inputContainer = document.querySelector('.input-container');
+botaoAdd.addEventListener('click', criarCompromisso);
+inputCompromisso.addEventListener('keydown', enter);
+function enter(event) {
+  if (event.key == 'Enter') {
+    criarCompromisso();
   }
 }
-marcar();
+function criarCompromisso() {
+  if (inputCompromisso.value.length === 0) {
+    alert('Erro! A caixa não pode estar vazia!');
+  } else {
+    let div = document.createElement('div');
+    div.innerText = inputCompromisso.value;
+    inputContainer.appendChild(div);
+    inputCompromisso.value = '';
+  }
+}
