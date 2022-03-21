@@ -71,20 +71,18 @@ letrasMudaCor(letraVerde, '#036b52');
 
 // Tamanho da Fonte
 let range = document.querySelector('#tamanhoDaFonte');
-range.addEventListener('change', alteraTamanho);
-function alteraTamanho() {
+range.addEventListener('change', function () {
   document.querySelector('#materia').style.fontSize = `${range.value}px`;
   document.querySelector('#valorTamanhoDaFonte').innerHTML = range.value;
   localStorage.setItem(
     'tamanhoFonte',
     JSON.stringify({ tamanhoFonte: `${range.value}px` })
   );
-}
+});
 
 // Espaco das Fonte
 let rangeEspaco = document.querySelector('#tamanhoDoEspacamento');
-rangeEspaco.addEventListener('change', alteraEspacamento);
-function alteraEspacamento() {
+rangeEspaco.addEventListener('change', function () {
   document.querySelector(
     '#materia'
   ).style.lineHeight = `${rangeEspaco.value}px`;
@@ -94,7 +92,7 @@ function alteraEspacamento() {
     'espacoFonte',
     JSON.stringify({ espacoFonte: `${rangeEspaco.value}px` })
   );
-}
+});
 
 // Selecao da Fonte
 let selecao = document.querySelector('#selecaoDaFonte');
