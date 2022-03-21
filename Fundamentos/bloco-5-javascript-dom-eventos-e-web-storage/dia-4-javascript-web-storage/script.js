@@ -35,6 +35,26 @@ function letrasMudaCor(botao, cor) {
   });
 }
 
+// Botao Reset
+let botaoReset = document.querySelector('#botaoReset');
+botaoReset.addEventListener('click', function () {
+  document.getElementById('materia').style.color = 'white';
+  localStorage.removeItem('corFonte');
+  document.body.style.backgroundColor = '#34695d9c';
+  localStorage.removeItem('corFundo');
+  document.querySelector('#materia').style.fontSize = '16px';
+  range.value = 16;
+  document.querySelector('#valorTamanhoDaFonte').innerHTML = 16;
+  localStorage.removeItem('tamanhoFonte');
+  document.querySelector('#materia').style.lineHeight = '30px';
+  rangeEspaco.value = 30;
+  document.querySelector('#valorTamanhoDoEspacamento').innerHTML = 30;
+  localStorage.removeItem('espacoFonte');
+  document.querySelector('#materia').style.fontFamily = 'sans-serif';
+  selecao.value = 'sans-serif';
+  localStorage.removeItem('fonte');
+});
+
 // Chamando funções para botões
 botaoMudaCorFundo(fundoVermelho, 'red');
 botaoMudaCorFundo(fundoAzul, 'blue');
@@ -51,20 +71,18 @@ letrasMudaCor(letraVerde, '#036b52');
 
 // Tamanho da Fonte
 let range = document.querySelector('#tamanhoDaFonte');
-range.addEventListener('change', alteraTamanho);
-function alteraTamanho() {
+range.addEventListener('change', function () {
   document.querySelector('#materia').style.fontSize = `${range.value}px`;
   document.querySelector('#valorTamanhoDaFonte').innerHTML = range.value;
   localStorage.setItem(
     'tamanhoFonte',
     JSON.stringify({ tamanhoFonte: `${range.value}px` })
   );
-}
+});
 
 // Espaco das Fonte
 let rangeEspaco = document.querySelector('#tamanhoDoEspacamento');
-rangeEspaco.addEventListener('change', alteraEspacamento);
-function alteraEspacamento() {
+rangeEspaco.addEventListener('change', function () {
   document.querySelector(
     '#materia'
   ).style.lineHeight = `${rangeEspaco.value}px`;
@@ -74,7 +92,7 @@ function alteraEspacamento() {
     'espacoFonte',
     JSON.stringify({ espacoFonte: `${rangeEspaco.value}px` })
   );
-}
+});
 
 // Selecao da Fonte
 let selecao = document.querySelector('#selecaoDaFonte');
@@ -89,6 +107,7 @@ window.onload = function () {
     document.querySelector('#materia').style.fontFamily = JSON.parse(
       localStorage.getItem('fonte')
     ).fonte;
+    selecao.value = JSON.parse(localStorage.getItem('fonte')).fonte;
   }
   // IF tamanho da fonte
   if (localStorage.getItem('tamanhoFonte') !== null) {
