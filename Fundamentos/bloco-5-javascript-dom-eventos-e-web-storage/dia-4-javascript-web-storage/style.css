@@ -24,7 +24,8 @@ main {
 #botaoReset {
   color: rgb(41, 41, 41);
   cursor: pointer;
-  margin-left: 80%;
+  margin-left: 70%;
+  margin-bottom: 10px;
   width: 100px;
   height: 40px;
   border-radius: 20px;
@@ -34,6 +35,12 @@ main {
 #botaoReset:hover {
   color: white;
   background-color: #14a07f;
+}
+
+footer {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 3px;
 }
 
 main h2 {
@@ -85,6 +92,7 @@ a {
 #materia {
   line-height: 30px;
   height: 200px;
+  width: 360px;
   font-size: 16px;
   overflow: auto;
   font-family: sans-serif;
@@ -160,12 +168,25 @@ a {
   width: 350px;
   margin: auto;
   border-radius: 20px;
+  padding: 4px;
 }
 
 select {
+  font-size: 15px;
+  background-color: #5cb39f00;
+  color: rgb(41, 41, 41);
   cursor: pointer;
   padding: 7px;
   text-align: center;
   width: 200px;
   border-radius: 10px;
+  border: 1px solid rgba(128, 128, 128, 0);
+}
+
+select:target {
+  border: 1px solid rgba(128, 128, 128, 0);
+}
+
+select:focus {
+  outline: 0;
 }
