@@ -21,6 +21,21 @@ main {
   text-align: center;
 }
 
+#botaoReset {
+  color: rgb(41, 41, 41);
+  cursor: pointer;
+  margin-left: 80%;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.055);
+}
+
+#botaoReset:hover {
+  color: white;
+  background-color: #14a07f;
+}
+
 main h2 {
   padding-bottom: 20px;
 }
@@ -53,6 +68,10 @@ a {
   padding-top: 20px;
 }
 
+#containerSelecaoFonte {
+  padding-top: 20px;
+}
+
 #background {
   display: flex;
   justify-content: center;
@@ -68,7 +87,7 @@ a {
   height: 200px;
   font-size: 16px;
   overflow: auto;
-  font-family: 'sans-serif';
+  font-family: sans-serif;
   padding: 10px;
 }
 
@@ -95,32 +114,39 @@ a {
 }
 
 .vermelho {
+  cursor: pointer;
   background-color: red;
 }
 
 .verde {
+  cursor: pointer;
   background-color: #036b52;
 }
 
 .branco {
+  cursor: pointer;
   background-color: white;
 }
 
 .azul {
+  cursor: pointer;
   background-color: blue;
 }
 
 .preto {
+  cursor: pointer;
   background-color: black;
 }
 
 #tamanhoDaFonte {
+  cursor: pointer;
   width: 270px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
 #tamanhoDoEspacamento {
+  cursor: pointer;
   width: 270px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -137,6 +163,7 @@ a {
 }
 
 select {
+  cursor: pointer;
   padding: 7px;
   text-align: center;
   width: 200px;

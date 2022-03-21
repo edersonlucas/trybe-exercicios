@@ -35,6 +35,26 @@ function letrasMudaCor(botao, cor) {
   });
 }
 
+// Botao Reset
+let botaoReset = document.querySelector('#botaoReset');
+botaoReset.addEventListener('click', function () {
+  document.getElementById('materia').style.color = 'white';
+  localStorage.removeItem('corFonte');
+  document.body.style.backgroundColor = '#34695d9c';
+  localStorage.removeItem('corFundo');
+  document.querySelector('#materia').style.fontSize = '16px';
+  range.value = 16;
+  document.querySelector('#valorTamanhoDaFonte').innerHTML = 16;
+  localStorage.removeItem('tamanhoFonte');
+  document.querySelector('#materia').style.lineHeight = '30px';
+  rangeEspaco.value = 30;
+  document.querySelector('#valorTamanhoDoEspacamento').innerHTML = 30;
+  localStorage.removeItem('espacoFonte');
+  document.querySelector('#materia').style.fontFamily = 'sans-serif';
+  selecao.value = 'sans-serif';
+  localStorage.removeItem('fonte');
+});
+
 // Chamando funções para botões
 botaoMudaCorFundo(fundoVermelho, 'red');
 botaoMudaCorFundo(fundoAzul, 'blue');
@@ -89,6 +109,7 @@ window.onload = function () {
     document.querySelector('#materia').style.fontFamily = JSON.parse(
       localStorage.getItem('fonte')
     ).fonte;
+    selecao.value = JSON.parse(localStorage.getItem('fonte')).fonte;
   }
   // IF tamanho da fonte
   if (localStorage.getItem('tamanhoFonte') !== null) {
