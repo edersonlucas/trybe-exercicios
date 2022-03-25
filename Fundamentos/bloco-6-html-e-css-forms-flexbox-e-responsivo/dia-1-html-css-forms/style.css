@@ -1,0 +1,11 @@
+body {
+  background-color: rgb(61, 61, 61);
+}
+
+form {
+  color: rgb(255, 255, 255);
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
