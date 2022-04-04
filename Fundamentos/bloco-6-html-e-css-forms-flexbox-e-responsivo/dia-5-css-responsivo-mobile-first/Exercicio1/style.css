@@ -1,0 +1,182 @@
+/*
+ * @see http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * apply a natural box layout model to all elements, but allowing components to change
+ */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#menu {
+  position: absolute;
+  opacity: 0;
+}
+
+div label {
+  position: relative;
+  cursor: pointer;
+  width: 64px;
+  height: 50px;
+}
+
+label span {
+  position: absolute;
+  display: block;
+  height: 7px;
+  width: 100%;
+  border-radius: 30px;
+  background: black;
+  transition: 0.25s ease-in-out;
+}
+
+label span:nth-child(1) {
+  top: 0px;
+}
+
+label span:nth-child(2) {
+  top: 16px;
+}
+
+label span:nth-child(3) {
+  top: 32px;
+}
+
+#menu:checked + label span:nth-child(1) {
+  transform: rotate(-45deg);
+  top: 16px;
+}
+
+#menu:checked + label span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu:checked + label span:nth-child(3) {
+  transform: rotate(45deg);
+  top: 16px;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.article-container {
+  width: 90%;
+  margin: auto;
+}
+
+.article-container p {
+  font-size: 20px;
+  text-align: justify;
+  padding: 10px 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-container h2 {
+  font-size: 25px;
+  padding: 8px;
+}
+
+.main-container section {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container img {
+  width: 280px;
+}
+
+.main-container figcaption {
+  margin-bottom: 20px;
+  font-size: medium;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    color: white;
+    background-color: #8d86c9;
+    /* padding: 0 25px; */
+  }
+
+  .header h1 {
+    font-size: 40px;
+  }
+
+  .article-container p {
+    font-size: 25px;
+  }
+
+  .main-container section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-container figure {
+    padding: 0 10px;
+  }
+
+  .main-container img {
+    width: 250px;
+  }
+
+  .main-container h2 {
+    font-size: 29px;
+  }
+
+  .main-container figcaption {
+    margin-bottom: 20px;
+    font-size: x-large;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  body {
+    color: black;
+    background-color: #cac4ce;
+  }
+}
+
+@media screen and (min-width: 1099px) {
+  body {
+    color: white;
+    background-color: #8070c5;
+  }
+
+  .main-container img {
+    width: 350px;
+  }
+}
