@@ -1,0 +1,68 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: white;
+  background-color: gray;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container header nav ul{
+  display: flex;
+  gap: 20px;
+}
+
+.main-content h1{
+  font-size: 21px;
+}
+
+.main-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
+
+footer {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
+
+@media screen and ( min-width: 600px) {
+  header {
+    flex-direction: row;
+  }
+
+  .aside-container {
+    flex-direction: row;
+  }
+
+  .main-content {
+    min-width: 600px;
+    max-width: 663px;
+  }
+}
