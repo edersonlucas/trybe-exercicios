@@ -5,7 +5,7 @@ Desenvolva uma HOF que retorna o resultado de um sorteio. Esta HOF irá gerar um
 const geraNumeroAleatorio = () => Math.ceil(Math.random() * 5)
 
 const aposta = (num, callback) => {
-  const numSorteado = geraNumeroAleatorio
+  const numSorteado = geraNumeroAleatorio()
   return callback(num, numSorteado)
 }
 
