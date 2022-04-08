@@ -51,13 +51,13 @@ A mana consumida por turno é 15. Além disto a função deve ter uma condiciona
 */
 
 const mana = () => {
-  let valueDamege = Math.floor(Math.random() * (((mage.intelligence * 2) + 1) - mage.intelligence)) + mage.intelligence;
+  let valueDamage = Math.floor(Math.random() * (((mage.intelligence * 2) + 1) - mage.intelligence)) + mage.intelligence;
   let valueMana = 15;
   if (battleMembers.mage.mana < 15) {
-    valueDamege = 'Não possui mana suficiente';
+    valueDamage = 'Não possui mana suficiente';
     valueMana = 0;
   }
-  return { dano: valueDamege, mana: valueMana }
+  return { dano: valueDamage, mana: valueMana }
 }
 
 /*
@@ -88,7 +88,7 @@ const gameActions = {
     const damage = callback().dano;
     mage.damage = damage;
     dragon.healthPoints -= damage;
-    mage.mana -= 15;
+    mage.mana -= callback().mana;
   },
   turnoDragon: (callback) => {
     const damage = callback();
@@ -102,8 +102,11 @@ const gameActions = {
 };
 
 
+
 gameActions.turnoWarrior(damageWarrior)
 gameActions.turnoMage(mana)
 gameActions.turnoDragon(damageDragon)
 console.log(gameActions.retorno());
+
+
 
