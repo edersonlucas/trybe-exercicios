@@ -32,13 +32,9 @@ const people = [
 ];
 
 const retornaAustraliano = (array) => {
-  const result = []
-  array.filter(({ name, bornIn, nationality }) => {
-    if (nationality === 'Australian' && bornIn > 1900 && bornIn <= 2000) {
-      result.push(`Nome: ${name}, Origem: ${nationality}, Nascido(a) em: ${bornIn}.`)
-    }
+ return  array.filter(({ name, bornIn, nationality }) => {
+    return nationality === 'Australian' && bornIn > 1900 && bornIn <= 2000
   })
-  return result
 }
 
 console.log(retornaAustraliano(people));
