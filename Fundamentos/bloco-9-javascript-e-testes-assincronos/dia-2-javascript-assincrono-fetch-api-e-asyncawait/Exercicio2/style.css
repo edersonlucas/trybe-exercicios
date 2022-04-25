@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000d7;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(58, 58, 58);
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  opacity: 0.98;
+}
+
+header h1{
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 75%;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  list-style-type: none;
+  background-color: rgba(61, 61, 61, 0.747);
+  height: 200px;
+  width: 210px;
+  margin: 10px;
+  color: white;
+  border-radius: 20px;
+  border: solid 1px white;
+}
+
+li:hover {
+  background-color: rgba(31, 31, 31, 0.747);
+  cursor: pointer;
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.432)
+}
+
+.img-bitcoin {
+  width: 30%;
+}
+
+.nome-bitcoin {
+  font-size: 1.2rem;
+}
+
+.abreviacao-bitcoin {
+  font-size: 0.8rem;
+}
+
+.valor-bitcoin {
+  font-size: 1rem
+}
+
+#links {
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  text-align: center;
+  background-color: rgb(58, 58, 58);
+  height: 30px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-around;
+}
+
+.botoes button {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  color: rgb(41, 41, 41);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  width: 100px;
+  height: 50px;
+}
+
+.botoes button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(70, 70, 70);
+}
+
+.loading {
+  width: 400px;
+  margin: auto;
+}
