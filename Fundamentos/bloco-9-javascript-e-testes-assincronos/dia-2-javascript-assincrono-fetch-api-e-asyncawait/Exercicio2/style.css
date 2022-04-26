@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000d7; 
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#sub-header {
+  margin-bottom: 0;
+}
+
+#button-top {
+  width: 50px;
+  height: 30px;
+  position: fixed;
+  right: 0;
+  margin-bottom: 40px;
+  margin-right: 10px;
+  bottom: 0;
+  background-image: url('top.svg');
+  background-size: contain;
+  background-repeat: no-repeat
+}
+
+#main {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  background-color: rgb(58, 58, 58);
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  opacity: 0.98;
+  z-index: 1;
+}
+
+#img-buscar {
+  width: 4%;
+  height: auto;
+}
+
+header h1{
+  margin: 0;
+  margin-left: 5px;
+  color: white;
+}
+
+.container {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+
+#lista {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  margin: 10px;
+  font-size: 1.5rem;
+}
+
+li {
+  background-color: rgba(61, 61, 61, 0.747);
+  height: 200px;
+  width: 210px;
+  margin: 10px;
+  color: white;
+  border-radius: 20px;
+  border: solid 1px white;
+  padding: 5px;
+}
+
+li:hover {
+  background-color: rgba(31, 31, 31, 0.747);
+  cursor: pointer;
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.432);
+}
+
+.img-bitcoin {
+  width: 40%;
+  height: auto;
+}
+
+.nome-bitcoin {
+  font-size: 1.2rem;
+}
+
+.abreviacao-bitcoin {
+  font-size: 0.8rem;
+}
+
+.valor-bitcoin {
+  font-size: 1rem;
+  margin: 5px;
+}
+
+#links {
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  text-align: center;
+  background-color: rgb(58, 58, 58);
+  height: 30px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}
+
+.btn-dark {
+  background-color: white;
+  color: rgb(41, 41, 41);
+  margin: 5px;
+}
+
+.botoes button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(70, 70, 70);
+}
+
+.loading {
+  width: 400px;
+  margin: auto;
+}
+
+/* @media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  li {
+    height: 180px;
+    width: 148px;
+  }
+
+  .valor-bitcoin {
+    font-size: 0.9rem
+  }
+  .nome-bitcoin {
+    font-size: 1rem
+  }
+} */
+
+/* @media screen and (max-width: 450px) {
+  header h1 {
+    font-size: 1.2rem
+  }
+
+  .botoes button {
+    width: 78px;
+    height: 43px;
+  }
+} */
+
+/* @media screen and (max-width: 306px) {
+  header h1 {
+    font-size: 0.8rem
+  }
+
+  .botoes button {
+    font-size: 0.8rem;
+    width: 65px;
+    height: 35px;
+  }
+
+  #footer {
+    font-size: 0.8rem;
+  }
+} */
+
+@media  screen and (max-width: 503px){
+  li {
+    width: 157px;
+    height: 185px
+  }
+  #main {
+    padding: 0px
+  }
+}
