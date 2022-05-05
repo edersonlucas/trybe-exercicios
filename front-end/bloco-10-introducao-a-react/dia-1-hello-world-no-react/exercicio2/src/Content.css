@@ -1,0 +1,22 @@
+.Bloco {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #121212;
+  color: white;
+  width: 376px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .Bloco {
+    width: 100%;
+    font-size: 0.7rem;
+  }
+}
