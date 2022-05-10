@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(67, 139, 247);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.containerPokedex h1 {
+  font-size: 2.5rem;
+}
+
+.containerPokemon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(29, 106, 223);
+  color: white;
+  width: 400px;
+  max-width: 100%;
+  margin: 8px;
+  border-radius: 5px;
+  border: 2px solid rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 5px;
+}
+
+.containerPokemon:hover {
+  cursor: pointer;
+  background-color: rgba(29, 107, 223, 0.63);
+  top: -4px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.521);
+  transition: all 0.3s
+}
+
+.containerPokemon:active {
+  background-color: rgba(28, 86, 173, 0.63);
+  top: -4px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.521);
+}
+
+.containerPokedex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 100vh;
+}
+
+.pokedex {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
